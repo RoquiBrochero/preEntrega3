@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Conversor de Moneda</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f2f2f2;
+    }
+
+    .container {
+      max-width: 400px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: green;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input[type="number"],
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: green;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    #resultado {
+      margin-top: 20px;
+      border: 1px solid green;
+      padding: 10px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Conversor de Moneda</h1>
+    <div class="form-group">
+      <label for="monto">Monto:</label>
+      <input type="number" id="monto" min="0" step="any">
+    </div>
+    <div class="form-group">
+      <label for="claveFiscal">Clave Fiscal:</label>
+      <input type="text" id="claveFiscal">
+    </div>
+    <div class="form-group">
+      <label for="selectMoneda">Moneda:</label>
+      <select id="selectMoneda">
+        <option value="dolar">Dólar</option>
+        <option value="euro">Euro</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <button onclick="convertirMoneda()">Convertir</button>
+    </div>
+    <div id="resultado"></div>
+  </div>
+
+  <script src="./mail.js"></script>
+</body>
+</html>
+
